@@ -38,7 +38,11 @@ Nümunə yeməklər yalnız frontend təqdimatıdır, bazaya yazılmır və sifa
 
 Rezervasiya üçün forma doldurmaq məcburi deyil. “WhatsApp-da rezerv et” düyməsi birbaşa restoranla söhbəti açır, alternativ olaraq zəng etmək olar. “Məlumat əlavə et” seçimi altında ad, qonaq sayı, tarix, saat və qeyd istəyə görə yazılır; heç bir sahə məcburi deyil. Mesaja yalnız doldurulan məlumatlar daxil edilir. Restoran təsdiqi barədə qeyd saxlanılıb.
 
-## Neon bağlantısı və ilk admin
+## Vercel-də sadə admin girişi
+
+Vercel → Settings → Environment Variables bölməsində `ADMIN_PASSWORD` adlı Secret əlavə edin (minimum 8, maksimum 1024 simvol). `APP_ORIGIN=https://cocomusichall.vercel.app` və `DATABASE_URL` də qurulmalıdır. Production üçün saxlayıb Redeploy edin. `/admin` səhifəsində istifadəçi adı `admin`, parol isə seçdiyiniz dəyərdir. Lokal admin əmri lazım deyil; baza cədvəlləri əvvəlcədən migrasiya ilə yaradılmalıdır. İlk düzgün girişdə hesab avtomatik yaradılır, bazada yalnız scrypt hash saxlanır. Dəyişən yalnız serverdə oxunur. Parolu dəyişib Redeploy etdikdə köhnə parol və sessiyalar qəbul edilmir. Bu rejim aktiv olduqda digər baza hesabları ilə giriş bağlanır. Minimum 8 simvol qəbul edilir; daha uzun, unikal parol seçin. Lokal istifadə üçün eyni dəyişəni `.env` faylına əlavə etmək olar.
+
+## Neon bağlantısı və alternativ lokal admin
 
 1. Neon hesabında PostgreSQL layihəsi yaradın. Connection string-i (serverless üçün pooled URL uyğundur) götürün; TLS üçün `sslmode=require` saxlayın.
 2. `.env.example` faylını `.env` adı ilə kopyalayın. `DATABASE_URL` dəyərini həqiqi Neon bağlantısı ilə əvəz edin.

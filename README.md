@@ -112,7 +112,9 @@ Windows-da Chrome-un standart quraşdırma yolu istifadə edilir; başqa mühit 
 4. Neon üçün lokal `npm run migrate` və `npm run admin` əmrlərini təhlükəsiz terminalda tamamlayın.
 5. Deploy edin. Domain dəyişdikdə `APP_ORIGIN` parametrini yeniləyib yenidən deploy edin. HTTPS girişini, qaralama/yayım görünüşünü, CRUD və WhatsApp keçidini real mühitdə yoxlayın.
 
-Production-da `DATABASE_URL` yoxdur və ya bağlantı alınmırsa API 503 qaytarır; saxta bazaya səssiz keçid yoxdur. Neon/Vercel hesabı, bağlantı və giriş məlumatları təqdim olunmadığı üçün canlı yerləşdirmə, real admin yaradılması və Neon üzərində işləmə təsdiqlənməyib.
+Canlı sayt: https://cocomusichall.vercel.app/ — mənbə: https://github.com/aliqurbanov23iyul-bit/cocomusichall . GitHub-a yükləmədən sonra Vercel avtomatik yerləşdirməsi uğurla tamamlandı. Ana səhifə, menyu və rezervasiya səhifələrinin canlı HTTP 200 cavabı, lokal şrift və 390/1440 px görünüşləri yoxlandı.
+
+Production-da `DATABASE_URL` yoxdur və ya bağlantı alınmırsa API 503 qaytarır; saxta bazaya səssiz keçid yoxdur. Hazırkı canlı yoxlamada `/api/public` 503 qaytardı: real menyu/tədbir bazası və admin girişi üçün Neon, migrasiya və ilk admin quraşdırması hələ tamamlanmalıdır. Ziyarətçi səhifələri nümunə menyunu açıq işarə ilə göstərir, WhatsApp rezervasiya keçidi bazasız işləyir. Real PostgreSQL və admin yaradılması təsdiqlənməyib.
 
 ## ZIP təhvili
 

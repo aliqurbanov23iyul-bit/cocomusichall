@@ -14,4 +14,6 @@ Rezervasiya birbaşa WhatsApp keçidi və zəng seçiminə sadələşdirildi. Ba
 - Devlab səhifəsi brauzerdə açılıb vizual yoxlandı; onun başlıq şrifti və düymə üslubu müşahidə edildi. Yeni COCO ilk ekranı in-app brauzerdə də açılaraq vizual yoxlandı. Mövcud rezervasiya, menyu və əlaqə funksiyaları saxlanıldı.
 - Testlər zamanı WhatsApp keçidi tutuldu; real rezervasiya və ya mesaj göndərilmədi.
 
-Neon/Vercel hesabları və bağlantı məlumatları olmadığı üçün real bazada migrasiya, ilk admin yaradılması, real PostgreSQL üzərindən CRUD və canlı Vercel yerləşdirməsi təsdiqlənməyib. Bunun üçün əmrlər və dəqiq addımlar README-də verilib. Tam ekran oxuyucu auditi aparılmayıb.
+GitHub repozitoriyası əvvəl boş idi; mənbə və Vercel-in statik çıxış/build ayarları main branch-inə yükləndi. GitHub commit statuslarında `Vercel – cocomusichall` və `Vercel – cocohallmusic` yerləşdirmələri uğurlu göstərildi. https://cocomusichall.vercel.app/ ünvanı canlı brauzerdə açılaraq yoxlandı. Ana səhifə, menyu və rezervasiya səhifələri 390/1440 px ölçülərində HTTP 200 qaytarır; lokal şrift və daşmasız görünüş yoxlanıb. WhatsApp rezervasiya keçidi düzgün nömrəyə yönəlir. `.env` və `node_modules` GitHub-a daxil edilməyib.
+
+Canlı `/api/public` cavabı 503-dür; Neon bağlantısı, real bazada migrasiya, ilk admin yaradılması və PostgreSQL üzərindən CRUD hələ təsdiqlənməyib. Bunun üçün əmrlər və dəqiq addımlar README-də verilib. Tam ekran oxuyucu auditi aparılmayıb.
